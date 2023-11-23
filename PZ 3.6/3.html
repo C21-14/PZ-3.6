@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>focus</title>
+</head>
+<body>
+	<input type="text" id="inputField">
+	<button id="submitButton">Натисни мене</button>
+	<div id="message"></div>
+	<script>
+		var inputField = document.getElementById('inputField');
+		var messageElement = document.getElementById('message');
+
+		inputField.addEventListener('focus', function() {
+    	messageElement.textContent = 'Елемент отримав фокус!';
+		});
+
+		inputField.addEventListener('blur', function() {
+    	messageElement.textContent = 'Елемент втратив фокус!';
+		});
+		inputField.style.border="10px double salmon"
+		messageElement.style.border="4px inset pink "
+		submitButton.style.border="10px solid green"
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>event</title>
+</head>
+<body>
+	<button id="myButton">Натисни мене</button>
+	<div id="message"></div>
+	<script>
+	var myButton = document.getElementById('myButton');
+	var messageElement = document.getElementById('message');
+
+	function firstEventHandler() {
+    messageElement.textContent += 'Подія виникла! ';
+     messageElement.style.color = 'red';
+	}
+	
+	function secondEventHandler() {
+	messageElement.textContent += 'Ще один обробник події! ';
+	 messageElement.style.color = 'pink';
+	}
+myButton.style.color="blue"
+	myButton.addEventListener('click', firstEventHandler);
+	myButton.addEventListener('click', secondEventHandler);
+</script>
+</body>
+</html>
